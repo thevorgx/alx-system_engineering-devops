@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Tell the story of passwd
 filep="/etc/passwd"
 while IFS=: read -r user pw uid gid _ home shell;
 do

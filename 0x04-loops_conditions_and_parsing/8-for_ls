@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#For ls
 for file in *;
 do
     if [ "$file" ]; then

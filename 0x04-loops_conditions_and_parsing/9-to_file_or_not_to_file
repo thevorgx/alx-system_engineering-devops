@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#To file, or not to file
 f="school"
 if [ -e $f ];then
     echo "school file exists"

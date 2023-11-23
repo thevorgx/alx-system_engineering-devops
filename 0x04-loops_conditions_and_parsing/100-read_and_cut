@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Read and cut
 filep="/etc/passwd"
 while IFS=: read -r username _ uid _ _ home _;
 do
