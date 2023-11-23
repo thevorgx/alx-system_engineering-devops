@@ -1,17 +1,15 @@
 #!/usr/bin/env bash
-hours=1
-minutes=0
-echo "Hour: $minutes"
-((minutes++))
-while [ "$minutes" -le 59 ]
-do
-    echo "$minutes"
-    (( minutes++ ))
-done
-
-echo "Hour: $hours"
+#clock time for 12hours 59 minutes
+hours=0
+minutes=1
 while [ "$hours" -le 12 ]
 do
-    echo "$hours"
+    echo "Hour: $hours"
+    while [ "$minutes" -le 59 ]
+    do
+        echo "$minutes"
+        (( minutes++ ))
+    done
+    minutes=1
     ((hours++))
 done
