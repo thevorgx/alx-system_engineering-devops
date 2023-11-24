@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#unkillable bad program
 trap 'echo "I am invincible!!!"' SIGTERM
 i=0
 while [ $i -le 1 ]
