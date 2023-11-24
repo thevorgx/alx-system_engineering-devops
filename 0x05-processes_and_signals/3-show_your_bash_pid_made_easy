@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-pgrep -l bash
+top -n 2 | grep bash | awk '{print $1,$12}'
