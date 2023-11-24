@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+#check for bash PID
 top -n 2 | grep bash | awk '{print $1,$12}'
