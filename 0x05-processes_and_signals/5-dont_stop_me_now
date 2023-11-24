@@ -1,1 +1,4 @@
 #!/usr/bin/env bash
+#Don't stop me now! ($! holds the variable of the last commande)
+pid=$(pgrep -f 4-to_infinity_and_beyond)
+kill "$pid"
