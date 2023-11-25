@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #unkillable bad program
 echo "$$" > /var/run/myscript.pid
+sigterm=false
 sigint=false
 sigquit=false
 trap 'sigterm=true' SIGTERM
