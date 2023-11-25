@@ -1,1 +1,24 @@
 #!/usr/bin/env bash
+#unkillable bad program
+echo "$$" > /var/run/myscript.pid
+sigint=false
+sigquit=false
+trap 'sigterm=true' SIGTERM
+trap 'sigint=true' SIGINT
+trap 'sigquit=true' SIGQUIT
+i=0
+while [ $i -le 1 ]
+do
+    echo "To infinity and beyond"
+    sleep 2
+    if [ "$sigterm" = true ]; then
+        echo "I hate the kill command"
+        rm -r /var/run/myscript.pid
+        exit 0
+    elif [ "$sigint" = true ]; then
+        echo "Y U no love me?!"
+    elif [ "$sigquit" = true ]; then
+        rm -r /var/run/myscript.pid
+        exit 0
+    fi        
+done
