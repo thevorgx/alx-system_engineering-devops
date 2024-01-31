@@ -1,1 +1,3 @@
 #!/usr/bin/env bash
+#script as one line commande that copy the host file to home, change localhost ip and add the google ip as facebook ip and copy back the file to the correct directory
+cp /etc/hosts ~/hosts.new && sed -i 's/^127\.0\.0\.1/127.0.0.2/' ~/hosts.new && sed -i '$ a\8.8.8.8 facebook.com' ~/hosts.new && cp -f ~/hosts.new /etc/hosts
