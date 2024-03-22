@@ -1,3 +1,4 @@
+# test comment for requirement
 node default{
   file { '/tmp/school':
     mode    => '0744',
