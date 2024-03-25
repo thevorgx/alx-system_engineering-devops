@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+# for the host ip, first, Set the path to the private key, after that set password authentication to no
