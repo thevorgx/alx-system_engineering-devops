@@ -1,1 +1,4 @@
 #!/usr/bin/env bash
+# first, Set the path to the private key, after that set password authentication to no
+IdentityFile ~/.ssh/school
+PasswordAuthentication no
