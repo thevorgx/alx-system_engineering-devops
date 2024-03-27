@@ -3,6 +3,5 @@
 # guide: https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-16-04
 sudo apt-get -y update
 sudo apt-get -y install nginx
-sudo mkdir -p /var/www/html
 echo "Hello World!" > /var/www/html/index.html
 sudo service nginx start
