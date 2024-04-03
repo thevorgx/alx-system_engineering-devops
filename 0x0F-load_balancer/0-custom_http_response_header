@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # script that set a custom header named 'X-Served-By' in my 2nd server
 cust_header="add_header X-Served-By \$hostname;"
-echo "$cust_header" | tee -a /etc/nginx/nginx.conf >/dev/null
+echo "$cust_header" | sudo tee -a /etc/nginx/nginx.conf >/dev/null
 sudo service nginx restart
