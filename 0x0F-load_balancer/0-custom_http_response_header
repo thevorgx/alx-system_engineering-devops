@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # script that set a custom header named 'X-Served-By' in my 2nd server
+sudo apt-get -y update
+sudo apt-get -y install nginx
 cust_header="add_header X-Served-By \$hostname;"
 sudo sed -i "/server_name _/a $cust_header" /etc/nginx/sites-enabled/default
 sudo service nginx restart
