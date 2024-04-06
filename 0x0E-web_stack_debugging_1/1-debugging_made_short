@@ -2,4 +2,5 @@
 # Replace port 8080 with port 80 using sed
 sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
-sudo pkill nginx
+nginx_pid=$(head -n 1 /run/nginx.pid)
+kill -9 "$nginx_pid"
