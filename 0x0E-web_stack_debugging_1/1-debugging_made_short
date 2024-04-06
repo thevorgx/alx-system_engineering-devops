@@ -3,3 +3,4 @@
 nginx_config="/etc/nginx/sites-enabled/default"
 sudo sed -i "s/8080/80/" "$nginx_config"
 sudo service nginx restart
+sudo pkill nginx
